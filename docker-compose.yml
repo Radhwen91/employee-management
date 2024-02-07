@@ -1,0 +1,20 @@
+version: "3"
+services:
+  employeemanagement:
+    container_name: employeemanagementcontainer
+    build: .
+    image: employeemanagement:v1
+    ports:
+      - "80:80"
+ #   expose:
+  #    - 80
+    networks:
+      - internalnet
+
+networks:
+  internalnet: 
+    internal: true
+
+
+
+  
